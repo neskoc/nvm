@@ -1,0 +1,26 @@
+.navbar ul {
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navbar li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none; /* Invisible untli hover */
+    position: absolute;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    clear: both;
+    margin-top: 1em;
+    -webkit-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+}

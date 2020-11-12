@@ -1,0 +1,104 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+.navbar.container,
+.sideclass.container {
+    font-family: Raleway;
+    background: #113eac;
+    padding: 0.8em 0.3em;
+    text-align: center;
+}
+
+.aside-class {
+    min-height: 20em;
+    float: right;
+    clear: right;
+    width: 82%;
+}
+
+.aside-class img {
+    max-width: 800px;
+}
+
+.sideclass.container {
+    text-align: left;
+    width: 16%;
+    overflow: unset;
+    float: left;
+    margin-top: 5px;
+    padding: 0.5em;
+}
+
+.navbar.container a,
+.sideclass.container a {
+    color: #fff;
+    text-decoration: none;
+    font: 20px Raleway;
+    margin: 0 10px;
+    padding: 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.sideclass.container a {
+    font: 17px Raleway;
+    padding: 2px 2px 0;
+}
+
+
+.sideclass ul {
+    display: inline;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+/* Top and Bottom borders come in */
+.navbar.topBottomBordersIn a::before,
+.navbar.topBottomBordersIn a::after,
+.sideclass.topBottomBordersIn a:hover::before,
+.sideclass.topBottomBordersIn a:hover::after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.navbar.topBottomBordersIn a::before,
+.sideclass.topBottomBordersIn a:hover::before {
+    top: 0;
+    transform: translateY(-10px);
+}
+
+.navbar.topBottomBordersIn a::after,
+.sideclass.topBottomBordersIn a:hover::after {
+    bottom: 0;
+    transform: translateY(10px);
+}
+
+.navbar.topBottomBordersIn a:hover::before,
+.navbar.topBottomBordersIn a:hover::after,
+.sideclass.topBottomBordersIn a:hover::before,
+.sideclass.topBottomBordersIn a:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.navbar .selected,
+.sideclass .selected {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    border-right: white solid 1px;
+    border-bottom: white solid 1px;
+    border-top: black solid 1px;
+    border-left: black solid 1px;
+    content: "";
+    transition: all 0.3s;
+}
+
